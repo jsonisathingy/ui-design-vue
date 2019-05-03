@@ -1,6 +1,4 @@
-<p align="center">
-  <b>ForgeRock UI Design System</b>
-</p>
+<h1>ForgeRock UI Design System</h1>
 
 <a name="quick-start"></a>
 ## Quick start
