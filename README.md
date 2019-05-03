@@ -1,5 +1,5 @@
 <p align="center">
-  <b>Identity Management (End User) - UI</b>
+  <b>ForgeRock UI Design System</b>
 </p>
 
 <a name="quick-start"></a>
