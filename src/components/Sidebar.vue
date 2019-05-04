@@ -15,7 +15,7 @@
                                         <h6 class="mb-3 text-muted">Desktop: Toggled</h6>
                                         <nav id="sidebar1" class="toggled overflow-hidden pr-4 border mb-4">
                                             <div class="fr-sidebar position-relative">
-                                                <ul class="sidebar-nav position-static scrollable" style="max-height: 400px;">
+                                                <ul class="sidebar-nav position-static scrollable" style="max-height: 330px;">
                                                     <li class="sidebar-brand position-static">
                                                         <b-dropdown id="dropdown-1" text="Dropdown Button" variant="account" class="d-block h-100 w-100" boundary="viewport" no-caret>
                                                             <template slot="button-content">
@@ -37,7 +37,7 @@
                                                             <b-dropdown-item>
                                                                 <div class="media">
                                                                     <img class="rounded-circle align-self-center" src="static/images/avatar-bjensen.jpg" width="34" height="34" alt="Barbara Jensen's Avatar">
-                                                                    <div class="media-body sidebar-item-text">
+                                                                    <div class="media-body sidebar-item-text pl-3">
                                                                         <h5 class="my-0">Barbara Jensen</h5>
                                                                         <span class="text-muted">bjensen@example.com</span>
                                                                     </div>
@@ -76,8 +76,8 @@
                                                     </li>
                                                     <li class="sidebar-divider my-3"></li>
                                                     <li>
-                                                        <b-link v-b-toggle.settingsSubmenu class="submenu-toggle"><i class="fal fa-fw mr-3 fa-cog"></i><span class="sidebar-item-text">Settings</span></b-link>
-                                                        <b-collapse id="settingsSubmenu">
+                                                        <b-link v-b-toggle.settingsSubmenu1 class="submenu-toggle"><i class="fal fa-fw mr-3 fa-cog"></i><span class="sidebar-item-text">Settings</span></b-link>
+                                                        <b-collapse id="settingsSubmenu1">
                                                           <ul class="p-0 list-unstyled">
                                                               <li>
                                                                   <router-link active-class="" :to="{ name: '#'}">
@@ -99,7 +99,7 @@
                                         <h6 class="mb-3 text-muted">Desktop: Minimized</h6>
                                         <nav id="sidebar2" class="overflow-hidden pr-4 border mb-4">
                                             <div class="fr-sidebar position-relative" @mouseleave="onMouseLeaveSidebar2">
-                                                <ul class="sidebar-nav position-static scrollable" style="max-height: 400px;">
+                                                <ul class="sidebar-nav position-static scrollable" style="max-height: 330px;">
                                                     <li class="sidebar-brand position-static">
                                                         <b-dropdown id="dropdown-1" text="Dropdown Button" variant="account" class="d-block h-100 w-100" boundary="viewport" no-caret ref="dropdown2">
                                                             <template slot="button-content">
@@ -120,8 +120,8 @@
                                                             <b-dropdown-divider></b-dropdown-divider>
                                                             <b-dropdown-item>
                                                                 <div class="media">
-                                                                    <img class="ounded-circle align-self-center" src="static/images/avatar-bjensen.jpg" width="34" height="34" alt="Barbara Jensen's Avatar">
-                                                                    <div class="media-body sidebar-item-text">
+                                                                    <img class="rounded-circle align-self-center" src="static/images/avatar-bjensen.jpg" width="34" height="34" alt="Barbara Jensen's Avatar">
+                                                                    <div class="media-body sidebar-item-text pl-3">
                                                                         <h5 class="my-0">Barbara Jensen</h5>
                                                                         <span class="text-muted">bjensen@example.com</span>
                                                                     </div>
@@ -160,8 +160,8 @@
                                                     </li>
                                                     <li class="sidebar-divider my-3"></li>
                                                     <li>
-                                                        <b-link v-b-toggle.settingsSubmenu class="submenu-toggle"><i class="fal fa-fw mr-3 fa-cog"></i><span class="sidebar-item-text">Settings</span></b-link>
-                                                        <b-collapse id="settingsSubmenu">
+                                                        <b-link v-b-toggle.settingsSubmenu2 class="submenu-toggle"><i class="fal fa-fw mr-3 fa-cog"></i><span class="sidebar-item-text">Settings</span></b-link>
+                                                        <b-collapse id="settingsSubmenu2">
                                                           <ul class="p-0 list-unstyled">
                                                               <li>
                                                                   <router-link active-class="" :to="{ name: '#'}">
@@ -193,7 +193,7 @@
                                         <h6 class="mb-3 text-muted">Light</h6>
                                         <nav id="sidebar3" class="toggled overflow-hidden pr-4 border mb-4">
                                             <div class="fr-sidebar position-relative">
-                                                <ul class="sidebar-nav position-static scrollable" style="max-height: 400px;">
+                                                <ul class="sidebar-nav position-static scrollable" style="max-height: 330px;">
                                                     <li class="sidebar-brand position-static">
                                                         <b-dropdown id="dropdown-3" text="Dropdown Button" variant="account" class="d-block h-100 w-100" boundary="viewport" no-caret>
                                                             <template slot="button-content">
@@ -214,8 +214,8 @@
                                                             <b-dropdown-divider></b-dropdown-divider>
                                                             <b-dropdown-item>
                                                                 <div class="media">
-                                                                    <img class="mr-3 rounded-circle align-self-center" src="static/images/avatar-bjensen.jpg" width="34" height="34" alt="Barbara Jensen's Avatar">
-                                                                    <div class="media-body sidebar-item-text">
+                                                                    <img class="rounded-circle align-self-center" src="static/images/avatar-bjensen.jpg" width="34" height="34" alt="Barbara Jensen's Avatar">
+                                                                    <div class="media-body sidebar-item-text pl-3">
                                                                         <h5 class="my-0">Barbara Jensen</h5>
                                                                         <span class="text-muted">bjensen@example.com</span>
                                                                     </div>
@@ -254,8 +254,8 @@
                                                     </li>
                                                     <li class="sidebar-divider my-3"></li>
                                                     <li>
-                                                        <b-link v-b-toggle.settingsSubmenu class="submenu-toggle"><i class="fal fa-fw mr-3 fa-cog"></i><span class="sidebar-item-text">Settings</span></b-link>
-                                                        <b-collapse id="settingsSubmenu">
+                                                        <b-link v-b-toggle.settingsSubmenu3 class="submenu-toggle"><i class="fal fa-fw mr-3 fa-cog"></i><span class="sidebar-item-text">Settings</span></b-link>
+                                                        <b-collapse id="settingsSubmenu3">
                                                           <ul class="p-0 list-unstyled">
                                                               <li>
                                                                   <router-link active-class="" :to="{ name: '#'}">
@@ -277,7 +277,7 @@
                                         <h6 class="mb-3 text-muted">Dark</h6>
                                         <nav id="sidebar2" class="toggled overflow-hidden pr-4 border mb-4">
                                             <div class="fr-sidebar position-relative fr-sidebar-dark bg-dark">
-                                                <ul class="sidebar-nav position-static scrollable" style="max-height: 400px;">
+                                                <ul class="sidebar-nav position-static scrollable" style="max-height: 330px;">
                                                     <li class="sidebar-brand position-static">
                                                         <b-dropdown id="dropdown-4" text="Dropdown Button" variant="account" class="d-block h-100 w-100" boundary="viewport" no-caret ref="dropdown4">
                                                             <template slot="button-content">
@@ -298,8 +298,8 @@
                                                             <b-dropdown-divider></b-dropdown-divider>
                                                             <b-dropdown-item>
                                                                 <div class="media">
-                                                                    <img class="mr-3 rounded-circle align-self-center" src="static/images/avatar-bjensen.jpg" width="34" height="34" alt="Barbara Jensen's Avatar">
-                                                                    <div class="media-body sidebar-item-text">
+                                                                    <img class="rounded-circle align-self-center" src="static/images/avatar-bjensen.jpg" width="34" height="34" alt="Barbara Jensen's Avatar">
+                                                                    <div class="media-body sidebar-item-text pl-3">
                                                                         <h5 class="my-0">Barbara Jensen</h5>
                                                                         <span class="text-muted">bjensen@example.com</span>
                                                                     </div>
@@ -338,8 +338,8 @@
                                                     </li>
                                                     <li class="sidebar-divider my-3"></li>
                                                     <li>
-                                                        <b-link v-b-toggle.settingsSubmenu class="submenu-toggle"><i class="fal fa-fw mr-3 fa-cog"></i><span class="sidebar-item-text">Settings</span></b-link>
-                                                        <b-collapse id="settingsSubmenu">
+                                                        <b-link v-b-toggle.settingsSubmenu4 class="submenu-toggle"><i class="fal fa-fw mr-3 fa-cog"></i><span class="sidebar-item-text">Settings</span></b-link>
+                                                        <b-collapse id="settingsSubmenu4">
                                                           <ul class="p-0 list-unstyled">
                                                               <li>
                                                                   <router-link active-class="" :to="{ name: '#'}">

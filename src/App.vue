@@ -278,9 +278,6 @@
             .sidebar-brand-logo {
                 display: none;
             }
-            .sidebar-brand-mark {
-                display: block;
-            }
             .btn-account,
             .btn.dropdown-toggle {
                 width: 100%;
@@ -328,6 +325,9 @@
                         white-space: nowrap;
                         overflow: hidden;
                         text-overflow: ellipsis;
+                    }
+                    .sidebar-item-text {
+                        color: $gray-700;
                     }
                 }
                 > li > a {
@@ -427,14 +427,19 @@
                 > li > a {
                     color: $gray-400;
                     &.router-link-active {
-                        color: $gray-300;
+                        color: $white;
                         background: $gray-900;
                         border-left-color: $primary;
                     }
                     &:hover {
-                        color: $gray-300;
+                        color: $white;
                         background: $gray-900;
                         text-decoration: none;
+                    }
+                }
+                .sidebar-brand {
+                    .sidebar-item-text {
+                        color: $gray-300;
                     }
                 }
                 .btn-account,
@@ -452,12 +457,12 @@
                     > li > a {
                         color: $gray-400;
                         &.router-link-active {
-                            color: $gray-300;
+                            color: $white;
                             background: $gray-900;
                             border-left-color: $primary;
                         }
                         &:hover {
-                            color: $gray-300;
+                            color: $white;
                             background: $gray-900;
                         }
                     }
