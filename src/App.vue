@@ -48,7 +48,7 @@
                         </router-link>
                     </li>
                     <li>
-                        <router-link class="d-flex" active-class=""  :to="{ name: 'Input Groups'}">
+                        <router-link class="d-flex" active-class=""  :to="{ name: 'InputGroups'}">
                             <span class="sidebar-item-text">Input Groups</span>
                         </router-link>
                     </li>

@@ -5,6 +5,8 @@ import Alerts from '../components/Alerts';
 import Buttons from '../components/Buttons';
 import Cards from '../components/Cards';
 import Dropdowns from '../components/Dropdowns';
+import Forms from '../components/Forms';
+import InputGroups from '../components/InputGroups';
 import Sidebar from '../components/Sidebar';
 import Tabs from '../components/Tabs';
 import NotFound from '../components/NotFound';
@@ -52,6 +54,18 @@ export default new Router({
             path: '/dropdowns',
             name: 'Dropdowns',
             component: Dropdowns,
+            meta: { hideToolbar: false }
+        },
+        {
+            path: '/forms',
+            name: 'Forms',
+            component: Forms,
+            meta: { hideToolbar: false }
+        },
+        {
+            path: '/inputgroups',
+            name: 'InputGroups',
+            component: InputGroups,
             meta: { hideToolbar: false }
         },
         {
