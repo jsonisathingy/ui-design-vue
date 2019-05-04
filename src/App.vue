@@ -120,8 +120,8 @@
         },
         mounted () {
             // Register an event listener when the Vue component is ready
-            console.log('mounted 1!');
             window.addEventListener('resize', this.handleResize);
+            this.handleResize();
         },
         filters: {
             capitalize: function (value) {
@@ -242,6 +242,14 @@
                         &> li > a.dropdown-toggle::after {
                             display: block;
                         }
+                        &> li > a.submenu-toggle {
+                            &:after {
+                                display: block;
+                            }
+                        }
+                        > li > ul {
+                            display: block;
+                        }
                     }
                     .sidebar-item-text {
                         display: inline;
@@ -278,6 +286,7 @@
                 width: 100%;
                 height: 100%;
                 padding: 10px 12px;
+                background-color: transparent;
                 display: block;
                 border-radius: 0;
             }
@@ -342,7 +351,7 @@
                       color: $gray-800;
                       background: #e4f4fd;
                     }
-                    .submenu-toggle {
+                    &.submenu-toggle {
                         &:after {
                             content: "\F107";
                             position: absolute;
@@ -395,7 +404,7 @@
                 bottom: 0;
                 left: 0;
                 width: 100%;
-                border-top: 1px solid $gray-300;
+                border-top: 1px solid $gray-200;
                 background-color: $white;
                 > a {
                     display: block;
@@ -503,9 +512,15 @@
                 }
                 .sidebar-nav {
                     width: $fr-sidebar-nav-width;
-                    > li > a.dropdown-toggle:after,
-                    > li > a.submenu-toggle:after {
-                        display: block;
+                    > li > a.dropdown-toggle {
+                        &:after {
+                            display: block;
+                        }
+                    }
+                    > li > a.submenu-toggle {
+                        &:after {
+                            display: block;
+                        }
                     }
                 }
                 .submenu-toggle {

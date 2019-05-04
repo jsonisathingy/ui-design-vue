@@ -13,7 +13,7 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <h6 class="mb-3 text-muted">Desktop: Toggled</h6>
-                                        <nav id="sidebar1" :class="[{'toggled': toggled},'overflow-hidden', 'pr-4', 'border', 'mb-4']">
+                                        <nav id="sidebar1" class="toggled overflow-hidden pr-4 border mb-4">
                                             <div class="fr-sidebar position-relative">
                                                 <ul class="sidebar-nav position-static scrollable" style="max-height: 400px;">
                                                     <li class="sidebar-brand position-static">
@@ -191,7 +191,7 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <h6 class="mb-3 text-muted">Light</h6>
-                                        <nav id="sidebar3" :class="[{'toggled': toggled},'overflow-hidden', 'pr-4', 'border','mb-4']">
+                                        <nav id="sidebar3" class="toggled overflow-hidden pr-4 border mb-4">
                                             <div class="fr-sidebar position-relative">
                                                 <ul class="sidebar-nav position-static scrollable" style="max-height: 400px;">
                                                     <li class="sidebar-brand position-static">
@@ -373,11 +373,14 @@
         name: 'Sidebar',
         data: function () {
             return {
+                window: {
+                    width: 0,
+                    height: 0
+                },
                 toggled: true
             };
         },
         components: {},
-        mounted () {},
         methods: {
             onMouseLeaveSidebar2 () {
                 this.$refs.dropdown2.hide();
@@ -387,7 +390,25 @@
             },
             onMouseLeaveSidebar5 () {
                 this.$refs.dropdown5.hide();
+            },
+            handleResize (event) {
+                console.log('Sidebar[] window has been resized: ' + window.innerWidth, event);
+                this.window.width = window.innerWidth;
+                if (this.window.width < 768) {
+                    this.toggled = false;
+                } else {
+                    this.toggled = true;
+                }
+            },
+            beforeDestroy () {
+                // Unregister the event listener before destroying this Vue instance
+                window.removeEventListener('resize', this.handleResize);
             }
+        },
+        mounted () {
+            // Register an event listener when the Vue component is ready
+            window.addEventListener('resize', this.handleResize);
+            this.handleResize();
         }
 
     };
