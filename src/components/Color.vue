@@ -74,17 +74,17 @@
 </template>
 
 <script>
-    export default {
-        name: 'Color',
-        data: function () {
-            return {};
-        },
-        components: {},
-        mounted () {},
-        methods: {}
-    };
+export default {
+    name: 'Color',
+    data: function () {
+        return {};
+    },
+    components: {},
+    mounted () {},
+    methods: {}
+};
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
     .bg-white {
         background-color: $white;
     }
